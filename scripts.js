@@ -58,6 +58,7 @@ if(flag){
     document.querySelector(".out code").innerHTML = out;
     const element = document.querySelector(".out code");
     element.scrollIntoView();
+    document.forms["form-control"].reset();
 }
 }
    
