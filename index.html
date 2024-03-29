@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-control" name="form-control">
+                <h2 class="heading">Registration Form</h2>
+                <div class="form-group1">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" value ="" required><br><br>
+                </div>
+                <div class="form-group2">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" value ="" required><br><br>
+                </div>
+                <div class="form-group3">
+                    <label for="address">Address:</label><br>
+                    <textarea id="address" name="address" required></textarea><br><br>
+                </div>
+                <div class="form-group4">
+                    <label for="pincode">Pincode:</label>
+                    <input type="text" id="pincode" name="pincode" pattern="^[0-9]{6}$" title="Enter Valid Pin Code" required><br><br>
+                </div>
+                <div class="form-group5">
+                    <label for="gender">Gender:</label><br>
+                    <input type="radio" id="male" class="gender" name="gender" value="Male" required>Male<br>
+                    <input type="radio" id="female" class="gender" name="gender" value="Female" >Female<br><br>
+                </div>
+                <div class="form-group6">
+                    <div style="visibility:hidden; color:red; " id="chk_option_error">
+                        Please select at least two options.
+                    </div>
+                    <label for="choiceoffood">Choice of Food:</label><br>
+                    <input type="checkbox" id="checkbox1" class="fav-foods" name="choiceoffood[]" value="Pizza" >Pizza<br>
+                    <input type="checkbox" id="checkbox2" class="fav-foods" name="choiceoffood[]" value="Burger" >Burger<br>
+                    <input type="checkbox" id="checkbox3" class="fav-foods" name="choiceoffood[]" value="Pasta" >Pasta<br>
+                    <input type="checkbox" id="checkbox4" class="fav-foods" name="choiceoffood[]" value="Shawarma" >Shawarma<br>
+                    <input type="checkbox" id="checkbox5" class="fav-foods" name="choiceoffood[]" value="Briyani" >Briyani<br><br>
+                </div>
+                
+                <div class="form-group7">
+                    <label for="state">State:</label>
+                    <input type="text" id="state" name="state" required><br><br>
+                </div>
+                <div class="form-group8">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" required><br><br>
+                </div>
+                <button id="submit" type="submit" onclick="return onSubmit()">Submit</button>
+            </form>
+            <div class="out">
+                <code>
+                   <!-- <p>First Name:</p>
+                   <p>Last Name:</p>
+                   <p>Address:</p>
+                   <p>Pincode:</p>
+                   <p>Gender:</p>
+                   <p>Fav food:</p>
+                   <p>State:</p>
+                   <p>Country:</p> -->
+                </code>
+             </div>
+        </div>
+        <script src="./scripts.js" async defer></script>
+    </body>
+</html>
